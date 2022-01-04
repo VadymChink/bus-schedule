@@ -1,28 +1,49 @@
 .wrap {
   width: 980px;
   min-height: 400px;
-  background: url("img/back.jpg") no-repeat center fixed;
-  background-size: 1500px;
+  background: url("img/nature_default.jpg") no-repeat center fixed;
   margin: 0 auto;
   border-radius: 50px;
   position: relative;
-
   font-size: 22px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.wrap1 {
+.header {
+  background: rgb(81, 81, 223);
+  margin-top: 20px;
+  height: 70px;
+  max-width: 1500px;
+  margin: 0 auto;
+  border-radius: 50px 50px 0 0;
+  display: flex;
+  align-items: center;
+}
+.bus_station a {
+  color: #333;
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 2px 20px;
+  background-color: #fbff00;
+}
+.bus_station a:hover {
+  color: brown;
+}
+.main {
   text-align: center;
   padding-top: 30px;
 }
-.tytle {
-  color: white;
+.title {
+  line-height: 150%;
+  padding-bottom: 25px;
 }
 img {
   position: absolute;
   left: 30px;
-  top: 20px;
+  top: 80px;
 }
+
 h1 {
   margin-top: 0;
 }
@@ -36,9 +57,7 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-.plus {
-  margin-right: 90px;
-}
+
 .direction {
   width: 400px;
   border: 2px solid black;
@@ -47,7 +66,9 @@ h1 {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-
+.direction:not(:last-child) {
+  margin-right: 90px;
+}
 .footer {
   background-color: #30abae;
   margin-top: 20px;
@@ -56,9 +77,9 @@ h1 {
   height: 120px;
   max-width: 1500px;
   margin: 0 auto;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-radius: 0 0 50px 50px;
 }
+
 span {
   color: red;
   font-size: 30px;
@@ -71,36 +92,38 @@ a:hover {
   color: white;
 }
 /* mobil */
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
+  .wrap {
+    width: 100%;
+    font-size: 35px;
+
+    background: url("img/back.jpg") fixed no-repeat center;
+  }
   .bus {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .plus {
-    margin-right: 0px;
-  }
-  .wrap {
-    width: 100%;
-    font-size: 35px;
-  }
   .direction {
     width: 700px;
   }
+  .direction:not(:last-child) {
+    margin-right: 0px;
+  }
   .footer {
-    background-color: #30abae;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     height: 170px;
-    max-width: 1500px;
-    margin: 0 auto;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
   }
   img {
     position: static;
     padding-top: 15px;
     margin-bottom: 20px;
+  }
+  .header {
+    height: 100px;
+    justify-content: center;
+  }
+  .bus_station a {
+    color: #333;
+    margin-left: 0px;
   }
 }
